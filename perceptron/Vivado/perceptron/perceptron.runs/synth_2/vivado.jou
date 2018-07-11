@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jun 21 15:10:37 2018
+# Process ID: 3652
+# Current directory: C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.runs/synth_2
+# Command line: vivado.exe -log perceptron_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source perceptron_wrapper.tcl
+# Log file: C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.runs/synth_2/perceptron_wrapper.vds
+# Journal file: C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source perceptron_wrapper.tcl -notrace

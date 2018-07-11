@@ -1,0 +1,253 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/PWM/Modelsim
+Eflip_flop_n_bit
+Z0 w1529479171
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Modelsim
+Z4 8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd
+Z5 FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd
+l0
+L5
+VPSmYPV[5lIjUVeo>J_RFS2
+!s100 Cel1z7_?Fa^zDLeAJf3Pc1
+Z6 OV;C;10.5c;63
+32
+Z7 !s110 1529660619
+!i10b 1
+Z8 !s108 1529660618.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd|
+Z10 !s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+DEx4 work 15 flip_flop_n_bit 0 22 PSmYPV[5lIjUVeo>J_RFS2
+l17
+L16
+Vz:JFfKXfFiRK1loUGAZ3<3
+!s100 8MnoFL7oEEdA5;5C3`E5B3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eperceptron
+Z13 w1529403662
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z15 8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd
+Z16 FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd
+l0
+L5
+V4T_O7L[Mg[ISHG;YZVdfT2
+!s100 nZOC=9I5?Bd;3:HT1GQ5o2
+R6
+32
+Z17 !s110 1529660618
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd|
+Z19 !s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd|
+!i113 1
+R11
+R12
+Astruct
+R14
+R1
+R2
+DEx4 work 10 perceptron 0 22 4T_O7L[Mg[ISHG;YZVdfT2
+l51
+L32
+V@XXWg7gUO`ZXE1BWO=HB:3
+!s100 <iV?;VS52X=[G`K<=Ino_2
+R6
+32
+R17
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Eperceptron_tb
+w1529658841
+R14
+R1
+R2
+R3
+Z20 8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd
+Z21 FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd
+l0
+L5
+VVU[]TYk_[XXJR9bcOPddF2
+!s100 MA0XCNYkDOL=nTREU<VY72
+R6
+32
+R7
+!i10b 1
+Z22 !s108 1529660619.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd|
+!s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd|
+!i113 1
+R11
+R12
+Abhv
+R14
+R1
+R2
+DEx4 work 13 perceptron_tb 0 22 VU[]TYk_[XXJR9bcOPddF2
+l67
+L8
+VA:G[b2FLz1aB>Zjz3k`4Q3
+!s100 2LgI2a5jaU0E`KFAA<aHT1
+R6
+32
+R17
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd|
+!s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd|
+!i113 1
+R11
+R12
+FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd
+w1529416909
+8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd
+Eperceptron_wrapper
+Z24 w1529478994
+R1
+R2
+R3
+Z25 8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd
+Z26 FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd
+l0
+L4
+V]MKoh0WKcEmAYgcRWZDCD0
+!s100 mS<Aicl[Dd1VH<8>>4D5c0
+R6
+32
+R17
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd|
+Z28 !s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd|
+!i113 1
+R11
+R12
+Astruct
+R1
+R2
+DEx4 work 18 perceptron_wrapper 0 22 ]MKoh0WKcEmAYgcRWZDCD0
+l75
+L33
+VDBmN=RnEJ^SdALdPLlJi53
+!s100 dFDR=z^6AmV[fj>9NM4gY1
+R6
+32
+R17
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Eperceptron_wrapper_tb
+Z29 w1529660650
+R14
+R1
+R2
+R3
+R20
+R21
+l0
+L5
+V?l0Yf9[J24VaekSN182Ki2
+!s100 _cZceQkzjEa;knSig_Ac30
+R6
+32
+Z30 !s110 1529660655
+!i10b 1
+Z31 !s108 1529660655.000000
+R23
+Z32 !s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd|
+!i113 1
+R11
+R12
+Abhv
+R14
+R1
+R2
+DEx4 work 21 perceptron_wrapper_tb 0 22 ?l0Yf9[J24VaekSN182Ki2
+l47
+L8
+V?b>DlW]h^MG9P^3J[>?Ic3
+!s100 f4H;iS4j1nKJ7n1e?=ISC1
+R6
+32
+R30
+!i10b 1
+R31
+R23
+R32
+!i113 1
+R11
+R12
+Eperceptron_wrapper_zybo
+Z33 w1529658491
+R1
+R2
+R3
+Z34 8C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd
+Z35 FC:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd
+l0
+L4
+VK@O<KJ51fWPThhM:GeBeB0
+!s100 ejAj;od<Beg69e9_ecg<R1
+R6
+32
+R7
+!i10b 1
+R22
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd|
+Z37 !s107 C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd|
+!i113 1
+R11
+R12
+Astruct
+R1
+R2
+DEx4 work 23 perceptron_wrapper_zybo 0 22 K@O<KJ51fWPThhM:GeBeB0
+l66
+L22
+Vd[?bgEzjA;L[RelmV56Aj0
+!s100 =eXEnRVEO28:DZBN926Xc3
+R6
+32
+R7
+!i10b 1
+R22
+R36
+R37
+!i113 1
+R11
+R12

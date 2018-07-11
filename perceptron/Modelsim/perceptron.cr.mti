@@ -1,0 +1,52 @@
+C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_wrapper_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity perceptron_wrapper_tb
+-- Compiling architecture bhv of perceptron_wrapper_tb
+
+} {} {}} C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper_zybo.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity perceptron_wrapper_zybo
+-- Compiling architecture struct of perceptron_wrapper_zybo
+
+} {} {}} C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/tb/perceptron_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity perceptron_tb
+-- Compiling architecture bhv of perceptron_tb
+
+} {} {}} C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity perceptron
+-- Compiling architecture struct of perceptron
+
+} {} {}} C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/perceptron_wrapper.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity perceptron_wrapper
+-- Compiling architecture struct of perceptron_wrapper
+
+} {} {}} C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/hdl/src/flip_flop_n_bit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity flip_flop_n_bit
+-- Compiling architecture bhv of flip_flop_n_bit
+
+} {} {}}

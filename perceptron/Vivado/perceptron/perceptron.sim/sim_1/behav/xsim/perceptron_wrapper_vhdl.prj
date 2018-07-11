@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../perceptron.srcs/sources_1/imports/src/flip_flop_n_bit.vhd" \
+"../../../../perceptron.srcs/sources_1/imports/src/perceptron.vhd" \
+"../../../../perceptron.srcs/sources_1/imports/src/perceptron_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

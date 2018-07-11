@@ -1,0 +1,1961 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Jun 22 10:47:31 2018
+| Host         : 4r35-Lenovo-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_timing_summary -max_paths 10 -file perceptron_wrapper_timing_summary_routed.rpt -pb perceptron_wrapper_timing_summary_routed.pb -rpx perceptron_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : perceptron_wrapper
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 81 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 16 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.193        0.000                      0                   16        0.494        0.000                      0                   16        8.500        0.000                       0                    97  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clock  {0.000 9.000}      18.000          55.556          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clock               0.193        0.000                      0                   16        0.494        0.000                      0                   16        8.500        0.000                       0                    97  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clock
+  To Clock:  clock
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.193ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.494ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        8.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.193ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.743ns  (logic 9.654ns (54.410%)  route 8.089ns (45.590%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.454    23.042    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.124    23.166 r  my_perceptron/q[7]_i_1/O
+                         net (fo=1, routed)           0.000    23.166    output_ff/D[7]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[7]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.032    23.359    output_ff/q_reg[7]
+  -------------------------------------------------------------------
+                         required time                         23.359    
+                         arrival time                         -23.166    
+  -------------------------------------------------------------------
+                         slack                                  0.193    
+
+Slack (MET) :             0.210ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.769ns  (logic 9.680ns (54.477%)  route 8.089ns (45.523%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.454    23.042    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.150    23.192 r  my_perceptron/q[8]_i_1/O
+                         net (fo=1, routed)           0.000    23.192    output_ff/D[8]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[8]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.075    23.402    output_ff/q_reg[8]
+  -------------------------------------------------------------------
+                         required time                         23.402    
+                         arrival time                         -23.192    
+  -------------------------------------------------------------------
+                         slack                                  0.210    
+
+Slack (MET) :             0.338ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.595ns  (logic 9.654ns (54.869%)  route 7.941ns (45.131%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.306    22.894    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.124    23.018 r  my_perceptron/q[11]_i_1/O
+                         net (fo=1, routed)           0.000    23.018    output_ff/D[11]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[11]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.029    23.356    output_ff/q_reg[11]
+  -------------------------------------------------------------------
+                         required time                         23.356    
+                         arrival time                         -23.018    
+  -------------------------------------------------------------------
+                         slack                                  0.338    
+
+Slack (MET) :             0.356ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.623ns  (logic 9.682ns (54.941%)  route 7.941ns (45.059%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.306    22.894    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.152    23.046 r  my_perceptron/q[9]_i_1/O
+                         net (fo=1, routed)           0.000    23.046    output_ff/D[9]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[9]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.075    23.402    output_ff/q_reg[9]
+  -------------------------------------------------------------------
+                         required time                         23.402    
+                         arrival time                         -23.046    
+  -------------------------------------------------------------------
+                         slack                                  0.356    
+
+Slack (MET) :             0.420ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.515ns  (logic 9.654ns (55.118%)  route 7.861ns (44.882%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.226    22.814    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.124    22.938 r  my_perceptron/q[3]_i_1/O
+                         net (fo=1, routed)           0.000    22.938    output_ff/D[3]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[3]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.031    23.358    output_ff/q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         23.358    
+                         arrival time                         -22.938    
+  -------------------------------------------------------------------
+                         slack                                  0.420    
+
+Slack (MET) :             0.435ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.544ns  (logic 9.683ns (55.192%)  route 7.861ns (44.808%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.226    22.814    my_perceptron/tmp1
+    SLICE_X41Y44         LUT3 (Prop_lut3_I0_O)        0.153    22.967 r  my_perceptron/q[4]_i_1/O
+                         net (fo=1, routed)           0.000    22.967    output_ff/D[4]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[4]/C
+                         clock pessimism              0.391    23.362    
+                         clock uncertainty           -0.035    23.327    
+    SLICE_X41Y44         FDCE (Setup_fdce_C_D)        0.075    23.402    output_ff/q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         23.402    
+                         arrival time                         -22.967    
+  -------------------------------------------------------------------
+                         slack                                  0.435    
+
+Slack (MET) :             0.477ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.457ns  (logic 9.654ns (55.302%)  route 7.803ns (44.698%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.972ns = ( 22.972 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.168    22.756    my_perceptron/tmp1
+    SLICE_X40Y49         LUT3 (Prop_lut3_I0_O)        0.124    22.880 r  my_perceptron/q[12]_i_1/O
+                         net (fo=1, routed)           0.000    22.880    output_ff/D[12]
+    SLICE_X40Y49         FDCE                                         r  output_ff/q_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.580    22.972    output_ff/CLK
+    SLICE_X40Y49         FDCE                                         r  output_ff/q_reg[12]/C
+                         clock pessimism              0.391    23.363    
+                         clock uncertainty           -0.035    23.328    
+    SLICE_X40Y49         FDCE (Setup_fdce_C_D)        0.029    23.357    output_ff/q_reg[12]
+  -------------------------------------------------------------------
+                         required time                         23.357    
+                         arrival time                         -22.880    
+  -------------------------------------------------------------------
+                         slack                                  0.477    
+
+Slack (MET) :             0.495ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.485ns  (logic 9.682ns (55.373%)  route 7.803ns (44.627%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.972ns = ( 22.972 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 r  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.645    20.888    my_perceptron/p_0_in[17]
+    SLICE_X40Y48         LUT2 (Prop_lut2_I1_O)        0.302    21.190 r  my_perceptron/tmp1_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    21.190    my_perceptron/tmp1_carry__0_i_3_n_0
+    SLICE_X40Y48         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.588 f  my_perceptron/tmp1_carry__0/CO[3]
+                         net (fo=15, routed)          1.168    22.756    my_perceptron/tmp1
+    SLICE_X40Y49         LUT3 (Prop_lut3_I0_O)        0.152    22.908 r  my_perceptron/q[13]_i_1/O
+                         net (fo=1, routed)           0.000    22.908    output_ff/D[13]
+    SLICE_X40Y49         FDCE                                         r  output_ff/q_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.580    22.972    output_ff/CLK
+    SLICE_X40Y49         FDCE                                         r  output_ff/q_reg[13]/C
+                         clock pessimism              0.391    23.363    
+                         clock uncertainty           -0.035    23.328    
+    SLICE_X40Y49         FDCE (Setup_fdce_C_D)        0.075    23.403    output_ff/q_reg[13]
+  -------------------------------------------------------------------
+                         required time                         23.403    
+                         arrival time                         -22.908    
+  -------------------------------------------------------------------
+                         slack                                  0.495    
+
+Slack (MET) :             0.554ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[15]_lopt_replica/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.416ns  (logic 9.650ns (55.410%)  route 7.766ns (44.590%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.428ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 f  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.580    20.823    my_perceptron/p_0_in[17]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I1_O)        0.302    21.125 r  my_perceptron/i__carry__0_i_4/O
+                         net (fo=1, routed)           0.000    21.125    my_perceptron/i__carry__0_i_4_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.523 f  my_perceptron/tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=15, routed)          1.196    22.719    my_perceptron/tmp10_in
+    SLICE_X39Y49         LUT3 (Prop_lut3_I2_O)        0.120    22.839 r  my_perceptron/q[15]_i_1/O
+                         net (fo=2, routed)           0.000    22.839    output_ff/D[14]
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[15]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[15]_lopt_replica/C
+                         clock pessimism              0.428    23.399    
+                         clock uncertainty           -0.035    23.364    
+    SLICE_X39Y49         FDCE (Setup_fdce_C_D)        0.029    23.393    output_ff/q_reg[15]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         23.393    
+                         arrival time                         -22.839    
+  -------------------------------------------------------------------
+                         slack                                  0.554    
+
+Slack (MET) :             0.555ns  (required time - arrival time)
+  Source:                 input_ff/q_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            18.000ns  (clock rise@18.000ns - clock rise@0.000ns)
+  Data Path Delay:        17.416ns  (logic 9.650ns (55.410%)  route 7.766ns (44.590%))
+  Logic Levels:           25  (CARRY4=14 LUT2=10 LUT3=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.971ns = ( 22.971 - 18.000 ) 
+    Source Clock Delay      (SCD):    5.423ns
+    Clock Pessimism Removal (CPR):    0.428ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.755     5.423    input_ff/CLK
+    SLICE_X38Y44         FDCE                                         r  input_ff/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.518     5.941 r  input_ff/q_reg[0]/Q
+                         net (fo=2, routed)           0.531     6.473    input_ff/Q[0]
+    SLICE_X38Y44         LUT2 (Prop_lut2_I0_O)        0.124     6.597 r  input_ff/a_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.597    my_perceptron/S[0]
+    SLICE_X38Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     7.240 r  my_perceptron/a_carry/O[3]
+                         net (fo=1, routed)           0.566     7.806    input_ff/O[2]
+    SLICE_X36Y45         LUT2 (Prop_lut2_I1_O)        0.307     8.113 r  input_ff/a__24_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.113    my_perceptron/q_reg[10][2]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.514 r  my_perceptron/a__24_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.514    my_perceptron/a__24_carry_n_0
+    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.848 r  my_perceptron/a__24_carry__0/O[1]
+                         net (fo=1, routed)           0.560     9.407    input_ff/q_reg[14]_0[1]
+    SLICE_X37Y44         LUT2 (Prop_lut2_I1_O)        0.303     9.710 r  input_ff/a__52_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     9.710    my_perceptron/q_reg[22][1]
+    SLICE_X37Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.290 r  my_perceptron/a__52_carry__0/O[2]
+                         net (fo=1, routed)           0.573    10.863    input_ff/q_reg[22]_0[2]
+    SLICE_X37Y47         LUT2 (Prop_lut2_I1_O)        0.302    11.165 r  input_ff/a__83_carry__0_i_2/O
+                         net (fo=1, routed)           0.000    11.165    my_perceptron/q_reg[30][2]
+    SLICE_X37Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    11.517 r  my_perceptron/a__83_carry__0/O[3]
+                         net (fo=1, routed)           0.566    12.083    input_ff/q_reg[30]_0[3]
+    SLICE_X38Y48         LUT2 (Prop_lut2_I1_O)        0.306    12.389 r  input_ff/a__117_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    12.389    my_perceptron/q_reg[38][3]
+    SLICE_X38Y48         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    12.765 r  my_perceptron/a__117_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    12.765    my_perceptron/a__117_carry__0_n_0
+    SLICE_X38Y49         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.984 r  my_perceptron/a__117_carry__1/O[0]
+                         net (fo=4, routed)           0.775    13.759    my_perceptron/a__117_carry__1_n_7
+    SLICE_X39Y45         LUT2 (Prop_lut2_I0_O)        0.295    14.054 r  my_perceptron/a__154_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    14.054    my_perceptron/a__154_carry__1_i_5_n_0
+    SLICE_X39Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    14.478 r  my_perceptron/a__154_carry__1/O[1]
+                         net (fo=3, routed)           0.601    15.079    my_perceptron/a__154_carry__1_n_6
+    SLICE_X40Y45         LUT2 (Prop_lut2_I1_O)        0.303    15.382 r  my_perceptron/a__194_carry__1_i_4/O
+                         net (fo=1, routed)           0.000    15.382    my_perceptron/a__194_carry__1_i_4_n_0
+    SLICE_X40Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.962 r  my_perceptron/a__194_carry__1/O[2]
+                         net (fo=3, routed)           0.591    16.553    my_perceptron/a__194_carry__1_n_5
+    SLICE_X42Y47         LUT2 (Prop_lut2_I1_O)        0.302    16.855 r  my_perceptron/a__235_carry__1_i_3/O
+                         net (fo=1, routed)           0.000    16.855    my_perceptron/a__235_carry__1_i_3_n_0
+    SLICE_X42Y47         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    17.207 r  my_perceptron/a__235_carry__1/O[3]
+                         net (fo=3, routed)           0.615    17.821    my_perceptron/C[17]
+    SLICE_X43Y47         LUT2 (Prop_lut2_I1_O)        0.307    18.128 r  my_perceptron/a__276_carry__1_i_2/O
+                         net (fo=1, routed)           0.000    18.128    my_perceptron/a__276_carry__1_i_2_n_0
+    SLICE_X43Y47         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    18.529 r  my_perceptron/a__276_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    18.529    my_perceptron/a__276_carry__1_n_0
+    SLICE_X43Y48         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    18.751 r  my_perceptron/a__276_carry__2/O[0]
+                         net (fo=1, routed)           0.613    19.364    my_perceptron/PCIN[18]
+    SLICE_X41Y48         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.879    20.243 f  my_perceptron/a_inferred__0/i__carry__0/O[2]
+                         net (fo=5, routed)           0.580    20.823    my_perceptron/p_0_in[17]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I1_O)        0.302    21.125 r  my_perceptron/i__carry__0_i_4/O
+                         net (fo=1, routed)           0.000    21.125    my_perceptron/i__carry__0_i_4_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    21.523 f  my_perceptron/tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=15, routed)          1.196    22.719    my_perceptron/tmp10_in
+    SLICE_X39Y49         LUT3 (Prop_lut3_I2_O)        0.120    22.839 r  my_perceptron/q[15]_i_1/O
+                         net (fo=2, routed)           0.000    22.839    output_ff/D[14]
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     18.000    18.000 r  
+    L16                                               0.000    18.000 r  clk (IN)
+                         net (fo=0)                   0.000    18.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         1.421    19.421 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    21.301    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.392 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          1.579    22.971    output_ff/CLK
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[15]/C
+                         clock pessimism              0.428    23.399    
+                         clock uncertainty           -0.035    23.364    
+    SLICE_X39Y49         FDCE (Setup_fdce_C_D)        0.030    23.394    output_ff/q_reg[15]
+  -------------------------------------------------------------------
+                         required time                         23.394    
+                         arrival time                         -22.839    
+  -------------------------------------------------------------------
+                         slack                                  0.555    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.494ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[68]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.860ns  (logic 0.395ns (45.915%)  route 0.465ns (54.085%))
+  Logic Levels:           2  (CARRY4=1 LUT3=1)
+  Clock Path Skew:        0.275ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.023ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[68]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[68]/Q
+                         net (fo=2, routed)           0.187     1.829    my_perceptron/Q[67]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.146     1.975 r  my_perceptron/a__276_carry__0/O[2]
+                         net (fo=4, routed)           0.278     2.253    my_perceptron/PCIN[12]
+    SLICE_X41Y49         LUT3 (Prop_lut3_I1_O)        0.108     2.361 r  my_perceptron/q[5]_i_1/O
+                         net (fo=1, routed)           0.000     2.361    output_ff/D[5]
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.864     2.023    output_ff/CLK
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[5]/C
+                         clock pessimism             -0.247     1.776    
+    SLICE_X41Y49         FDCE (Hold_fdce_C_D)         0.091     1.867    output_ff/q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.867    
+                         arrival time                           2.361    
+  -------------------------------------------------------------------
+                         slack                                  0.494    
+
+Slack (MET) :             0.550ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[67]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.917ns  (logic 0.363ns (39.595%)  route 0.554ns (60.405%))
+  Logic Levels:           3  (CARRY4=1 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[67]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[67]/Q
+                         net (fo=2, routed)           0.266     1.908    input_ff/Q[66]
+    SLICE_X43Y46         LUT2 (Prop_lut2_I0_O)        0.045     1.953 r  input_ff/a__276_carry__0_i_4/O
+                         net (fo=1, routed)           0.000     1.953    my_perceptron/q_reg[70][0]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     2.023 r  my_perceptron/a__276_carry__0/O[0]
+                         net (fo=4, routed)           0.288     2.311    my_perceptron/PCIN[10]
+    SLICE_X41Y44         LUT3 (Prop_lut3_I1_O)        0.107     2.418 r  my_perceptron/q[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.418    output_ff/D[3]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[3]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.092     1.867    output_ff/q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.867    
+                         arrival time                           2.418    
+  -------------------------------------------------------------------
+                         slack                                  0.550    
+
+Slack (MET) :             0.581ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[67]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.962ns  (logic 0.371ns (38.571%)  route 0.591ns (61.429%))
+  Logic Levels:           2  (CARRY4=1 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[67]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[67]/Q
+                         net (fo=2, routed)           0.187     1.829    my_perceptron/Q[66]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.124     1.953 r  my_perceptron/a__276_carry__0/O[1]
+                         net (fo=4, routed)           0.404     2.357    my_perceptron/PCIN[11]
+    SLICE_X41Y44         LUT3 (Prop_lut3_I1_O)        0.106     2.463 r  my_perceptron/q[4]_i_1/O
+                         net (fo=1, routed)           0.000     2.463    output_ff/D[4]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[4]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.107     1.882    output_ff/q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.463    
+  -------------------------------------------------------------------
+                         slack                                  0.581    
+
+Slack (MET) :             0.667ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[64]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.033ns  (logic 0.469ns (45.385%)  route 0.564ns (54.615%))
+  Logic Levels:           3  (CARRY4=1 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X42Y50         FDCE                                         r  input_ff/q_reg[64]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y50         FDCE (Prop_fdce_C_Q)         0.164     1.665 r  input_ff/q_reg[64]/Q
+                         net (fo=2, routed)           0.274     1.939    input_ff/Q[63]
+    SLICE_X43Y45         LUT2 (Prop_lut2_I0_O)        0.045     1.984 r  input_ff/a__276_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.984    my_perceptron/q_reg[66][0]
+    SLICE_X43Y45         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.152     2.136 r  my_perceptron/a__276_carry/O[2]
+                         net (fo=4, routed)           0.291     2.426    my_perceptron/PCIN[8]
+    SLICE_X41Y44         LUT3 (Prop_lut3_I1_O)        0.108     2.534 r  my_perceptron/q[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.534    output_ff/D[1]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[1]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.092     1.867    output_ff/q_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.867    
+                         arrival time                           2.534    
+  -------------------------------------------------------------------
+                         slack                                  0.667    
+
+Slack (MET) :             0.723ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[64]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.104ns  (logic 0.489ns (44.287%)  route 0.615ns (55.713%))
+  Logic Levels:           3  (CARRY4=1 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X42Y50         FDCE                                         r  input_ff/q_reg[64]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y50         FDCE (Prop_fdce_C_Q)         0.164     1.665 r  input_ff/q_reg[64]/Q
+                         net (fo=2, routed)           0.274     1.939    input_ff/Q[63]
+    SLICE_X43Y45         LUT2 (Prop_lut2_I0_O)        0.045     1.984 r  input_ff/a__276_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.984    my_perceptron/q_reg[66][0]
+    SLICE_X43Y45         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.172     2.156 r  my_perceptron/a__276_carry/O[3]
+                         net (fo=4, routed)           0.341     2.497    my_perceptron/PCIN[9]
+    SLICE_X41Y44         LUT3 (Prop_lut3_I1_O)        0.108     2.605 r  my_perceptron/q[2]_i_1/O
+                         net (fo=1, routed)           0.000     2.605    output_ff/D[2]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[2]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.107     1.882    output_ff/q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.605    
+  -------------------------------------------------------------------
+                         slack                                  0.723    
+
+Slack (MET) :             0.751ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[64]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.119ns  (logic 0.381ns (34.063%)  route 0.738ns (65.937%))
+  Logic Levels:           3  (CARRY4=1 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.275ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.023ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X42Y50         FDCE                                         r  input_ff/q_reg[64]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y50         FDCE (Prop_fdce_C_Q)         0.164     1.665 r  input_ff/q_reg[64]/Q
+                         net (fo=2, routed)           0.274     1.939    input_ff/Q[63]
+    SLICE_X43Y45         LUT2 (Prop_lut2_I0_O)        0.045     1.984 r  input_ff/a__276_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.984    my_perceptron/q_reg[66][0]
+    SLICE_X43Y45         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     2.049 r  my_perceptron/a__276_carry/O[1]
+                         net (fo=4, routed)           0.464     2.512    my_perceptron/PCIN[7]
+    SLICE_X41Y49         LUT3 (Prop_lut3_I1_O)        0.107     2.619 r  my_perceptron/q[0]_i_1/O
+                         net (fo=1, routed)           0.000     2.619    output_ff/D[0]
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.864     2.023    output_ff/CLK
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[0]/C
+                         clock pessimism             -0.247     1.776    
+    SLICE_X41Y49         FDCE (Hold_fdce_C_D)         0.092     1.868    output_ff/q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.868    
+                         arrival time                           2.619    
+  -------------------------------------------------------------------
+                         slack                                  0.751    
+
+Slack (MET) :             0.839ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[69]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.205ns  (logic 0.591ns (49.028%)  route 0.614ns (50.972%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[69]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[69]/Q
+                         net (fo=2, routed)           0.185     1.827    my_perceptron/Q[68]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[2]_O[3])
+                                                      0.127     1.954 r  my_perceptron/a__276_carry__0/O[3]
+                         net (fo=1, routed)           0.129     2.082    my_perceptron/PCIN[13]
+    SLICE_X41Y47         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.216     2.298 r  my_perceptron/a_inferred__0/i__carry/O[1]
+                         net (fo=4, routed)           0.301     2.599    my_perceptron/p_0_in[12]
+    SLICE_X41Y44         LUT3 (Prop_lut3_I1_O)        0.107     2.706 r  my_perceptron/q[7]_i_1/O
+                         net (fo=1, routed)           0.000     2.706    output_ff/D[7]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[7]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.092     1.867    output_ff/q_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.867    
+                         arrival time                           2.706    
+  -------------------------------------------------------------------
+                         slack                                  0.839    
+
+Slack (MET) :             0.859ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[69]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.241ns  (logic 0.554ns (44.646%)  route 0.687ns (55.354%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.275ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.023ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[69]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[69]/Q
+                         net (fo=2, routed)           0.185     1.827    my_perceptron/Q[68]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[2]_O[3])
+                                                      0.127     1.954 r  my_perceptron/a__276_carry__0/O[3]
+                         net (fo=1, routed)           0.129     2.082    my_perceptron/PCIN[13]
+    SLICE_X41Y47         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.180     2.262 r  my_perceptron/a_inferred__0/i__carry/O[0]
+                         net (fo=4, routed)           0.373     2.636    my_perceptron/p_0_in[11]
+    SLICE_X41Y49         LUT3 (Prop_lut3_I1_O)        0.106     2.742 r  my_perceptron/q[6]_i_1/O
+                         net (fo=1, routed)           0.000     2.742    output_ff/D[6]
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.864     2.023    output_ff/CLK
+    SLICE_X41Y49         FDCE                                         r  output_ff/q_reg[6]/C
+                         clock pessimism             -0.247     1.776    
+    SLICE_X41Y49         FDCE (Hold_fdce_C_D)         0.107     1.883    output_ff/q_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.883    
+                         arrival time                           2.742    
+  -------------------------------------------------------------------
+                         slack                                  0.859    
+
+Slack (MET) :             0.878ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[67]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.259ns  (logic 0.560ns (44.474%)  route 0.699ns (55.526%))
+  Logic Levels:           5  (CARRY4=3 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.022ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[67]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[67]/Q
+                         net (fo=2, routed)           0.187     1.829    my_perceptron/Q[66]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.124     1.953 r  my_perceptron/a__276_carry__0/O[1]
+                         net (fo=4, routed)           0.155     2.108    my_perceptron/PCIN[11]
+    SLICE_X41Y45         LUT2 (Prop_lut2_I1_O)        0.113     2.221 r  my_perceptron/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     2.221    my_perceptron/i__carry_i_2_n_0
+    SLICE_X41Y45         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.094     2.315 r  my_perceptron/tmp1_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.315    my_perceptron/tmp1_inferred__0/i__carry_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     2.354 f  my_perceptron/tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=15, routed)          0.357     2.711    my_perceptron/tmp10_in
+    SLICE_X41Y44         LUT3 (Prop_lut3_I2_O)        0.049     2.760 r  my_perceptron/q[8]_i_1/O
+                         net (fo=1, routed)           0.000     2.760    output_ff/D[8]
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.863     2.022    output_ff/CLK
+    SLICE_X41Y44         FDCE                                         r  output_ff/q_reg[8]/C
+                         clock pessimism             -0.247     1.775    
+    SLICE_X41Y44         FDCE (Hold_fdce_C_D)         0.107     1.882    output_ff/q_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.760    
+  -------------------------------------------------------------------
+                         slack                                  0.878    
+
+Slack (MET) :             0.889ns  (arrival time - required time)
+  Source:                 input_ff/q_reg[67]/C
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Destination:            output_ff/q_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by clock  {rise@0.000ns fall@9.000ns period=18.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        1.267ns  (logic 0.559ns (44.103%)  route 0.708ns (55.897%))
+  Logic Levels:           5  (CARRY4=3 LUT2=1 LUT3=1)
+  Clock Path Skew:        0.273ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.021ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.589     1.501    input_ff/CLK
+    SLICE_X43Y50         FDCE                                         r  input_ff/q_reg[67]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y50         FDCE (Prop_fdce_C_Q)         0.141     1.642 r  input_ff/q_reg[67]/Q
+                         net (fo=2, routed)           0.187     1.829    my_perceptron/Q[66]
+    SLICE_X43Y46         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.124     1.953 r  my_perceptron/a__276_carry__0/O[1]
+                         net (fo=4, routed)           0.155     2.108    my_perceptron/PCIN[11]
+    SLICE_X41Y45         LUT2 (Prop_lut2_I1_O)        0.113     2.221 r  my_perceptron/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     2.221    my_perceptron/i__carry_i_2_n_0
+    SLICE_X41Y45         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.094     2.315 r  my_perceptron/tmp1_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.315    my_perceptron/tmp1_inferred__0/i__carry_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     2.354 r  my_perceptron/tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=15, routed)          0.367     2.720    my_perceptron/tmp10_in
+    SLICE_X39Y49         LUT3 (Prop_lut3_I0_O)        0.048     2.768 r  my_perceptron/q[10]_i_1/O
+                         net (fo=1, routed)           0.000     2.768    output_ff/D[10]
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    L16                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.130    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
+                         net (fo=96, routed)          0.862     2.021    output_ff/CLK
+    SLICE_X39Y49         FDCE                                         r  output_ff/q_reg[10]/C
+                         clock pessimism             -0.247     1.774    
+    SLICE_X39Y49         FDCE (Hold_fdce_C_D)         0.105     1.879    output_ff/q_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.879    
+                         arrival time                           2.768    
+  -------------------------------------------------------------------
+                         slack                                  0.889    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clock
+Waveform(ns):       { 0.000 9.000 }
+Period(ns):         18.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         18.000      15.845     BUFGCTRL_X0Y16  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X37Y43    input_ff/q_reg[19]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X38Y44    input_ff/q_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X37Y43    input_ff/q_reg[20]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X39Y43    input_ff/q_reg[21]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X39Y43    input_ff/q_reg[22]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X36Y45    input_ff/q_reg[23]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X37Y43    input_ff/q_reg[24]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X37Y44    input_ff/q_reg[25]/C
+Min Period        n/a     FDCE/C   n/a            1.000         18.000      17.000     SLICE_X37Y44    input_ff/q_reg[26]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X40Y45    input_ff/q_reg[43]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X40Y45    input_ff/q_reg[44]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X40Y45    input_ff/q_reg[45]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X40Y45    input_ff/q_reg[46]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y43    input_ff/q_reg[48]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y43    input_ff/q_reg[49]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y43    input_ff/q_reg[50]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y46    input_ff/q_reg[51]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y46    input_ff/q_reg[52]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X41Y44    output_ff/q_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X37Y43    input_ff/q_reg[19]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X38Y44    input_ff/q_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X37Y43    input_ff/q_reg[20]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X39Y43    input_ff/q_reg[21]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X39Y43    input_ff/q_reg[22]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X36Y45    input_ff/q_reg[23]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X37Y43    input_ff/q_reg[24]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X37Y44    input_ff/q_reg[25]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X37Y44    input_ff/q_reg[26]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         9.000       8.500      SLICE_X36Y45    input_ff/q_reg[27]/C
+
+
+

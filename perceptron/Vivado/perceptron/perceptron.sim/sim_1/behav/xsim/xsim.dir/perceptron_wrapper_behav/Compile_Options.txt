@@ -1,0 +1,1 @@
+-wto "0524eb6a817a453781017267e51c03bd" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "perceptron_wrapper_behav" "xil_defaultlib.perceptron_wrapper" -log "elaborate.log" 

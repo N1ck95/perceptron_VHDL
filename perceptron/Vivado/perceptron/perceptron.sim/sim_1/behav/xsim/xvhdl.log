@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.srcs/sources_1/imports/src/flip_flop_n_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity flip_flop_n_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.srcs/sources_1/imports/src/perceptron.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity perceptron
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/4r35/Documents/Universita/Semestre2/Digital_Systems/LAB/Modelsim/perceptron/Vivado/perceptron/perceptron.srcs/sources_1/imports/src/perceptron_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity perceptron_wrapper
